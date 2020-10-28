@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "main" {
   location = "australiaeast"
 }
 module "storage_instance" {
-    source = "./instances"
+    source = "Storage/instances"
     storage_name ="modulestorage100"
     resource_group_name ="${azurerm_resource_group.main.name}"
     location= "${azurerm_resource_group.main.location}"
